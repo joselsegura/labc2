@@ -1,0 +1,11 @@
+name: Test job
+on: [push, pull_request]
+
+jobs:
+  testjob:
+    runs-on: ubuntu-latest
+    name: Print the content of the repository
+    steps:
+      - uses: actions/checkout@v4
+      - name: List files
+        run: ls -R
